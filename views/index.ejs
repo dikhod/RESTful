@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comments</title>
+</head>
+<body>
+    <h1>List of comments</h1>
+    <a href="/comments/new">New Comment</a>
+    <ul>
+       <%for(const cmt of comments){%>
+        <li>
+            <strong><%= cmt.user %></strong> : <%= cmt.text %>
+            <a href="comments/<%=cmt.id%>">Show</a>
+            <a href="comments/<%=cmt.id%>/edit">Edit</a>
+            <form action="/comments/<%=cmt.id%>?_method=DELETE" method="post">
+                <button >Delete</button>
+            </form>
+        </li>
+      <%}%>
+        
+      
+    </ul>
+</body>
+</html>
