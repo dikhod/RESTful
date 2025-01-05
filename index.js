@@ -74,5 +74,5 @@ app.delete('/comments/:commentId',(req,res)=>{
     res.redirect('/comments');
 })
 app.listen(3000,()=>{
-    console.log('server starting at port 3000...');
+    console.log('hello chacha server start ho gya hai...');
 })
